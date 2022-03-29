@@ -5,7 +5,7 @@ import {GrInProgress} from "react-icons/gr"
 
 const MapList = ({}) => {
         return (
-        <div style={{paddingLeft:""}}>
+        <div style={{paddingLeft:"",fontSize:"18px"}}>
             <List spacing={40}>
                 <Heading as='h2' size='3xl' isTruncated>Phase 2</Heading>
             <ListItem>

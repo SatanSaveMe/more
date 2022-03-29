@@ -14,18 +14,18 @@ const WhyYouBuyIt = ({}) => {
                 <Box flex="3">
                     <Center>
                         <Text padding="20px" className="buyItSectionChild" color="white">
-                            <Heading as='h2' size='3xl'>Why would you want to own a Metis ApeWife?</Heading>
+                            <Heading as='h2' size='3xl'>Why hodl a Metis ApeWife?</Heading>
                             <Divider orientation='horizontal' />
                             <p>    
-                            Because mDAW aspires to build an active and engaged community on Metis Network
+                            Because mDAW aspires to build an inclusive, receptive and engaged community which will focus on evlovling the cultural and artistic aspect of Metis.
                             </p>
                             <Divider orientation='horizontal' />
                             <p>    
-                            Owning a mDAW adds value to your online identity. You have the complete ownership of a digital work of art
+                            Owning an mDAW will give you access to our DAO and Staking Platform which will be 100% controlled by the mDAW community
                             </p>
                             <Divider orientation='horizontal' />
                             <p>
-                                Metis NFT ecosystem is just getting started so there's a lot of room for growth and development
+                            Gives you access to online events organized by our team
                             </p>
                             <Divider orientation='horizontal' />
                             <p>

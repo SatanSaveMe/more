@@ -21,7 +21,7 @@ import FirstMapList from './FirstMapList';
 const RoadMap = ({}) => {
         return (
             <div style={{height:"100%"}}>
-                <div style={{paddingLeft:"20px",backgroundColor:"#000000",color:"white",border:"1px solid black"}}>
+                <div style={{paddingLeft:"20px",backgroundColor:"#000000",color:"#05DAC8",borderBottom:"1px solid black",position:"absolute"}}>
                     <Heading as='h1' size='3xl' isTruncated> RoadMap </Heading>
                 </div>
             {/* <Flex color='white' alignItems="stretch" height="100%" border="2px solid pink"> */}

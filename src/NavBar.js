@@ -18,19 +18,10 @@ const roboPunksNFTAddress="0x7592FA5a3f928166100254226B713DD98D6b631A";
 
 const NavBar = ({accounts,setAccounts}) => {
     
-    const isConnected = Boolean[accounts[0]]
 
     let [indicator,setIndicator] = useState(Boolean[accounts[0]])
+    const [walletAddress,setWalletAddress] = useState("")
 
-    async function connectAccount(){
-        if(window.ethereum){
-            const accounts = await window.ethereum.request({
-                method:"eth_requestAccounts",
-            })
-            setAccounts(accounts)
-            setIndicator(true)
-        }
-    }
 
     const isWhiteListed = async () => {
         const provider = await new ethers.providers.Web3Provider(window.ethereum)
@@ -53,14 +44,19 @@ const NavBar = ({accounts,setAccounts}) => {
     }
 
     useEffect(()=>{
-    },[indicator])
+        if(indicator){
+            setWalletAddress(accounts[0])
+            console.log(walletAddress)
+        }
+    },[])
     
     
     return (
             <div className="frontpage">
-            <Image src={require('./assets/images/LogoMakr(3).png')}  width="100px" marginLeft="10px" height="162px" margin="0px 10px" className="logo" />
+            {/* <Image src={require('./assets/images/LogoMakr(3).png')}  width="100px" marginLeft="10px" height="162px" margin="0px 10px" className="logo" /> */}
+            <Image src={require('./assets/images/LogoMakr(3).png')}   marginLeft="10px" height="170px"  margin="0px 10px" className="logo" />
             <div className="frontpagebt">
-    <Flex justify="space-between" align="center"  padding="0px" backgroundColor="rgba(0, 0, 0, 0.4)" >
+    <Flex justify="space-between" align="center"  padding="10px" backgroundColor="rgba(0, 0, 0, 0.5)" borderRadius="10%" >
         {/*left side - social media */}
 
             
@@ -71,22 +67,22 @@ const NavBar = ({accounts,setAccounts}) => {
                 <Image src={require('./assets/images/metisLogo.jpeg')} className="" borderRadius="29%" boxSize="42px" margin="0 15px"/>
                 </Link> */}
             <Link href="https://discord.gg/pcj4SmWfdf" target="_blank">
-                <Image src={Discord} boxSize="42px" margin="0 15px" />
+                <Image src={Discord} boxSize="52px" margin="0 15px" />
             </Link>
             <Link href="https://twitter.com/ApewivesM" target="_blank">
-                <Image src={Twitter} boxSize="42px" margin="0 15px" />
+                <Image src={Twitter} boxSize="52px" margin="0 15px" />
             </Link>
             <Link href="https://www.google.com">
-                <Image src={Telegram} boxSize="42px" margin="0 15px" />
+                <Image src={Telegram} boxSize="52px" margin="0 15px" />
             </Link>
         </Flex>
 
         {/*right side - social media */}
 
     <Flex justify="space-around" align="center" width="60%" padding="" >
-        <Box margin="0 15px">roadmap</Box>
+        
         <Spacer/>
-        <Box margin="0 15px">Am I whitelisted</Box>
+        
         <Spacer/>
         <Button 
         backgroundColor="black" 
@@ -102,20 +98,11 @@ const NavBar = ({accounts,setAccounts}) => {
             test
         </Button>
     {/*connect button */}
-        {indicator? <Box margin="0 15px" color="yellow" fontSize="20px">connected</Box> 
+        {indicator? <Box margin="0 15px" color="yellow" fontSize="20px">{accounts[0]}</Box> 
         : 
         <Button 
-        backgroundColor="#D6517D" 
-        borderRadius="5px" 
-        boxShadow="0px 2px 2x 1px $0F0F0F" 
-        color="white"  
-        cursor="pointer" 
-        fontFamily="inherit" 
-        padding="15px" 
-        margin="0 15px" 
-        onClick={connectAccount}
         >
-            Connect
+            
         </Button>}
 
     </Flex>

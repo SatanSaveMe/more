@@ -11,11 +11,11 @@ const Specs = ({}) => {
                             Specs
                         </Heading>
                         <Divider orientation='horizontal' />
-                        <p>    
+                        <p style={{fontSize:"20px"}}>    
                         mDAW implements the ERC-721A NFT contract. This reduces significantlly the gas fee for mass mints compared to the ERC-721 contract.
                         </p>
                         <Divider orientation='horizontal' />
-                        <p>
+                        <p style={{fontSize:"20px"}}>
                             Attributes, properties, number sequences etc. of mDAW are the same as the OG collection with the addition of an ancient greek pillar to fit in with the Metis aesthetic 
                         </p>
                         </Text>

@@ -30,18 +30,22 @@ function App() {
         </div>
         
       </div>
+      <div className="sectionDivider"></div>
       <div className="whyYouBuyIt">
         <WhyYouBuyIt/>
         {/* 1 . pronomia gia defi projects , 2. metapolitiki axia tou nft exaitias tou staking p tha lavei xwra, 3. hedge fund, 4. alpha community on metis and some other shit , put the gif next to it */}
       </div>
+      <div className="sectionDivider"></div>
       <div className="roadMap">
         <RoadMap accounts={accounts} setAccounts={setAccounts}/>
       </div>
       {/* photoasslpitter <div></div> */}
+      <div className="sectionDivider"></div>
       <div className="specs">
         {/* change background */}
         <Specs/>        
       </div>
+      <div className="sectionDivider"></div>
       <div className="sect">
         <Sect/>
       </div>
